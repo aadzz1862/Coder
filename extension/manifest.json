@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Referral Extension",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage", "activeTab", "identity"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "icons": {
+    "128": "public/icons/icon.png"
+  }
+}
