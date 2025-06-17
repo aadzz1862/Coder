@@ -42,5 +42,3 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   }
   return false;
 });
-
-console.log('Content script loaded');
