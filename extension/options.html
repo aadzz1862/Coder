@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Referral Extension Options</title>
+  </head>
+  <body>
+    <div>
+      <label>
+        Engine:
+        <select id="engine">
+          <option value="rule">Rule-based</option>
+          <option value="huggingface">Hugging Face</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>
+        HF API Key:
+        <input type="password" id="apiKey" />
+      </label>
+    </div>
+    <button id="save">Save</button>
+    <script type="module" src="src/options/index.ts"></script>
+  </body>
+</html>
