@@ -8,15 +8,31 @@
   "background": {
     "service_worker": "dist/background.js"
   },
+  "options_page": "options.html",
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "https://*.linkedin.com/*",
+        "https://*.indeed.com/*",
+        "https://*.glassdoor.com/*",
+        "https://*.monster.com/*"
+      ],
       "js": ["dist/content.js"],
       "run_at": "document_idle"
     }
   ],
-  "permissions": ["storage", "activeTab", "identity"],
-  "host_permissions": ["https://mail.google.com/*"],
+  "permissions": ["storage", "identity"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://api.hunter.io/*",
+    "https://api.clearbit.com/*",
+    "https://www.linkedin.com/*",
+    "https://api-inference.huggingface.co/*"
+  ],
+  "oauth2": {
+    "client_id": "YOUR_GMAIL_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/gmail.send"]
+  },
   "icons": {
     "128": "public/icons/icon.png"
   }

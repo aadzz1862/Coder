@@ -11,6 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist"
   },
-  "include": ["extension/src/**/*", "__tests__/**/*"],
+  "include": ["extension/src/**/*", "__tests__/**/*", "e2e/**/*"],
   "exclude": ["node_modules"]
 }
